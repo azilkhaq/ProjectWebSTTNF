@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIWIKODE</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/jquery-3.5.1.slim.min.js"></script>
+</head>
+
+<body>
+    <section class="login"><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <form>
+                                <h5>Siwikode</h5><br>
+                                <div class="form-grup">
+                                    <label>Username</label>
+                                    <input type="text" class="form-control" name="username" id="username">
+                                </div>
+                                <div class="form-grup">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" name="password" id="password">
+                                </div><br>
+                                <button onclick="login()" type="button" class="btn btn-primary">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    let admin = "admin"
+    let passAdmin = "123"
+
+    function login() {
+        var username = $("#username").val()
+        var password = $("#password").val()
+
+        if (username == admin && password == passAdmin) {
+            window.location.href = "form8.html"
+        } else {
+            alert("username atau password salah!")
+        }
+    }
+</script>
+
+</html>
